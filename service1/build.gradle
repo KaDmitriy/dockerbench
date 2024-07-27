@@ -30,9 +30,10 @@ tasks.named('test') {
 }
 
 build.doLast {
+	def appFullName = 'service1-'+version+'.jar'
 	copy {
-            from 'build/libs/service1-0.0.1-SNAPSHOT.jar'
+            from 'build/libs/'+appFullName
             into "docker/rootfs/"
-            rename ('service1-0.0.1-SNAPSHOT.jar','app.jar')
+            rename (appFullName,'app.jar')
         }
 }
