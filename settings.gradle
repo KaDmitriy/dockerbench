@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = 'dockerbench'
 include('service1')
+include('service11')
