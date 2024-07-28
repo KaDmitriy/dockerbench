@@ -1,9 +1,9 @@
 # Build
-docker build -t dockerbench/service1:0.1 .
+docker build -t dockerbench/service-10:0.1 .
 
 # RUN
-docker run --name dockerbench-service1 -d -it -p 9080:8080 dockerbench/service1:v0.1
+docker run --name dockerbench-service-10 -d -it -p 9010:9010 dockerbench/service-10:0.1
 
 # DEL
-docker rm dockerbench-service1
-docker rmi dockerbench/service1:v0.1
+docker rm dockerbench-service-10
+docker rmi dockerbench/service-10:v0.1
