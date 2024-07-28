@@ -28,3 +28,12 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+build.doLast {
+	def appFullName = 'service11-'+version+'.jar'
+	copy {
+            from 'build/libs/'+appFullName
+            into "docker/rootfs/"
+            rename (appFullName,'app.jar')
+        }
+}
